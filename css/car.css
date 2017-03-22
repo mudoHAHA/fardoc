@@ -2,8 +2,8 @@ a{
 	text-decoration: none;
 }
 .main{
-	margin-left:6%;
-	width: 1137px;
+	width: 1150px;
+	margin:0 auto;
 }
 .carnav ul{
 	overflow:hidden;
@@ -48,7 +48,7 @@ a{
 	background:url('../img/完成.png') no-repeat;
 }
 .carnav .space{
-	width: 580px;
+	width: 590px;
 	height: 42px;
 }
 table{
@@ -92,14 +92,14 @@ td img{
 }
 .td3{
 	width: 123px;
-	margin:0 50px;
+	margin:0 58px 0 62px;
 }
 .tdnum{
-	margin-right:63px;
+	margin-right:73px;
 }
 .td4{
 	width: 34px;
-	margin:0 95px;
+	margin:0 66px 0 105px;
 }
 .redprice{
 	color:#FA0E25;

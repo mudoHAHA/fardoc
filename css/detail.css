@@ -7,8 +7,12 @@
 a{
 	text-decoration: none;
 }
+#main{
+	width: 1150px;
+	margin:0 auto;
+}
 .location{
-	margin-left:5%;
+	/*margin-left:5%;*/
 	font-size:14px;
 	color:#989898;
 	padding:23px 0 23px 0;
@@ -17,7 +21,7 @@ a{
 	color:#989898!important;
 }
 .info_main{
-	margin-left: 5%;
+	/*margin-left: 5%;*/
 }
 #pro_img{
 	width: 440px;
@@ -300,7 +304,7 @@ a{
 }
 .introduce{
 	width: 1147px;
-	margin-left: 5%;
+	/*margin-left: 5%;*/
 	margin-top:50px;
 	border:1px solid #E4E4E4;
 	background-color: #fff;

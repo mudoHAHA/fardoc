@@ -1,5 +1,9 @@
+.main1{
+	width: 1150px;
+	margin:0 auto;
+}
 .location{
-	margin-left:5%;
+	/*margin-left:5%;*/
 	font-size:14px;
 	color:#989898;
 	padding:23px 0 23px 0;
@@ -8,9 +12,9 @@
 	color:#989898!important;
 }
 .sort>ul{
-	width: 1142px;
+	width: 100%;
 	overflow:hidden;
-	margin-left: 5%;
+	/*margin-left: 5%;*/
 	margin-bottom: 30px;
 	border:1px solid #E6E6E6;
 	background-color: #fff;
@@ -109,7 +113,11 @@
 	margin-left:-4px;
 }
 .sort{
+	width: 100%;
 	position:relative;
+}
+.choice{
+	width: 100%;
 }
 .down{
 	z-index: 1000;
