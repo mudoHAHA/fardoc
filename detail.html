@@ -8,11 +8,13 @@
 	<link rel="stylesheet" href="css/detail.css">
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/popup.js"></script>
-	<script type="text/javascript" src="js/myjs.js"></script>
+	<script type="text/javascript" src="js/detail.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			$('#top').load('top.html');
 			$('#foot').load('footer.html');
+
+			$('.popup').popup({ifDrag: false, dragLimit: true});
 		});
 	</script>
 </head>
