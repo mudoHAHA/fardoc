@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>农博士</title>
+	<link rel="stylesheet" href="css/publicStyle.css">
+	<link rel="stylesheet" href="css/mall.css">
+	<link rel="stylesheet" href="css/car.css">
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+	<script type="text/javascript" src="js/myjs.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#top').load('top.html');
+			$('#foot').load('footer.html');
+		});
+	</script>
+</head>
+<body>
+	<div id="top"></div>
+	<div class="main">
+		<div class="carnav">
+			<ul>
+				<li>购物车</li>
+				<li class="space"></li><i></i>
+				<li class="carbar">
+					<i class="finish">1</i>
+					<p>购物车</p>
+				</li><i></i>
+				<li class="carbar">
+					<i class="unfinish">2</i>
+					<p>确认订单</p>
+				</li><i class="gray"></i>
+				<li class="carbar">
+					<i class="unfinish">3</i>
+					<p>付款</p>
+				</li><i class="gray"></i>
+				<li class="carbar">
+					<i class="unfinish">4</i>
+					<p>支付成功</p>
+				</li><i class="gray"></i>
+			</ul>
+		</div>
+		<div>
+			<div>
+				<table class="cartab">
+					<tr class="tabhead">
+						<td>
+							<input id="checkAll" type="checkbox">
+						</td>
+						<td class="td1">商品</td>
+						<td class="td2"></td>
+						<td>单价(元)</td>
+						<td class="td3 tdnum">数量</td>
+						<td>小计(元)</td>
+						<td class="td4">操作</td>
+					</tr>
+					<tr class="mmm">
+						<td>
+							<input type="checkbox" name="ch">
+						</td>
+						<td class="td1">
+							<img src="" alt="">
+						</td>
+						<td class="td2">啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</td>
+						<td class="oneprice">￥<span>130.60</span></td>
+						<td class="td3">
+							<i class="low2"></i>
+							<input class="ipt" type="text" value="1">
+							<i class="add2"></i>
+						</td>
+						<td class="redprice">￥<span></span></td>
+						<td class="td4 btn1">删除
+							<div class="popup">
+							    <div class="title">
+							      <span>x</span>
+							    </div>
+							    <div class="cont">
+							    	<p>操作提醒</p>
+							    	<i></i>
+							    	<p>您确定要删除此产品吗？</p>
+							    	<a href="#"><input class="balance" type="button" value="确定"></a>
+							    	<a href="#"><input class="continue" type="button" value="取消"></a>
+							    </div>
+							  </div>
+							  <div class="mask_shadow"></div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox" name="ch">
+						</td>
+						<td></td>
+						<td></td>
+						<td class="oneprice">￥<span>120.00</span></td>
+						<td class="td3">
+							<i class="low2"></i>
+							<input class="ipt" type="text" value="1">
+							<i class="add2"></i>
+						</td>
+						<td class="redprice">￥<span></span></td>
+						<td class="td4 btn1">删除
+							<div class="popup">
+							    <div class="title">
+							      <span>x</span>
+							    </div>
+							    <div class="cont">
+							    	<p>操作提醒</p>
+							    	<i></i>
+							    	<p>您确定要删除此产品吗？</p>
+							    	<a href="#"><input class="balance" type="button" value="确定"></a>
+							    	<a href="#"><input class="continue" type="button" value="取消"></a>
+							    </div>
+							  </div>
+							  <div class="mask_shadow"></div>
+						</td>	
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox" name="ch">
+						</td>
+						<td></td>
+						<td></td>
+						<td class="oneprice">￥<span>100.00</span></td>
+						<td class="td3">
+							<i class="low2"></i>
+							<input class="ipt" type="text" value="1">
+							<i class="add2"></i>
+						</td>
+						<td class="redprice">￥<span></span></td>
+						<td class="td4 btn1">删除
+							<div class="popup">
+							    <div class="title">
+							      <span>x</span>
+							    </div>
+							    <div class="cont">
+							    	<p>操作提醒</p>
+							    	<i></i>
+							    	<p>您确定要删除此产品吗？</p>
+							    	<a href="#"><input class="balance" type="button" value="确定"></a>
+							    	<a href="#"><input class="continue" type="button" value="取消"></a>
+							    </div>
+							  </div>
+							  <div class="mask_shadow"></div>
+						</td>	
+					</tr>
+				</table>
+			</div>
+			<div class="clearcar">
+				<ul>
+					<li>清空购物车</li>
+					<li class="space1"></li>
+					<li id="count">产品数量总计：<span></span></li>
+					<li id="money">总金额：<span></span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="buttons">
+			<input type="button" value="提交订单">
+			<input type="button" value="继续购物">
+		</div>
+	</div>
+	<div id="foot"></div>
+</body>
+</html>
