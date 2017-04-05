@@ -78,7 +78,6 @@ td img{
 	display:block;
 	width: 100px;
 	height: 100px;
-	background-color: #F7AEAE;
 }
 .td1,.td3{
 	text-align: center;
@@ -88,18 +87,33 @@ td img{
 	margin:0 25px 0 35px;
 }
 .td2{
-	width: 30%;
+	width: 340px;
+}
+.tdd{
+	width: 340px;
+}
+.oneprice{
+	width: 80px;
+	text-align: center;
+}
+.redprice{
+	width: 80px;
+	text-align: center;
 }
 .td3{
 	width: 123px;
-	margin:0 58px 0 62px;
+	margin:0 53px 0 44px;
 }
 .tdnum{
 	margin-right:73px;
+	margin-left:50px;
 }
 .td4{
 	width: 34px;
-	margin:0 66px 0 105px;
+	margin:0 66px 0 90px;
+}
+.btn1{
+	margin-left:85px;
 }
 .redprice{
 	color:#FA0E25;
@@ -134,11 +148,11 @@ td .ipt{
 	border:2px solid #F6F6F6;
 }
 .clearcar ul{
+	width: 1106px;
 	overflow:hidden;
 	padding:33px 22px;
 }
 .clearcar ul li{
-	float:left;
 	font-size: 1.2em;
 	margin-right:18px;
 }
@@ -147,18 +161,19 @@ td .ipt{
 	color:#FA0E25;
 }
 .clearcar ul li:first-child{
+	float:left;
 	color:#9A9A9A;
 }
-.clearcar ul li:first-child:hover{
-	/*cursor:pointer;*/
+#count,#money{
+	float:right;
 }
-.clearcar ul li:last-child{
+.clearcar ul #money{
 	margin-right:0;
 }
-.clearcar .space1{
-	width: 700px;
+/*.clearcar .space1{
+	width: 690px;
 	height: 1px;
-}
+}*/
 .buttons input{
 	float:right;
 	width: 214px;
@@ -280,4 +295,67 @@ td.btn1:hover{
 	border:2px solid #167A58;
 	margin-top:10px;
 	color:#fff;
+}
+.pagination{
+	display:table;
+	margin:46px auto 0;
+}
+.pagination>ul>li{
+	float:left;
+	/*width: 30px;*/
+	text-align: center;
+	padding:6px 0;
+	margin-right:15px;
+	background-color: #fff;
+	color:#999;
+}
+.pagination>ul>li:first-child,.pagination>ul>li:last-child{
+	width: 30px;
+}
+.pagination .morenum{
+	padding:0;
+	margin:0;
+	overflow:hidden;
+	background-color: #F8F8F8;
+}
+.pagination>ul{
+	/*overflow:hidden;*/
+}
+.pagination>ul>li:last-child{
+	margin-right:0;
+}
+.pagination i{
+	display:inline-block;
+	width: 100%;
+	height: 7px;
+	padding-top:7px;
+}
+.pagination .left{
+	background:url('../img/_ 拷贝.png') no-repeat center center;
+}
+.pagination .right{
+	background:url('../img/_.png') no-repeat center center;
+}
+.pagination .on{
+	background-color: #116F5D;
+}
+.pagination .on a{
+	color:#fff;	
+}
+.morenum ul{
+	overflow:hidden;
+	/*margin-left: -45px;*/
+}
+.morenum span{
+	background-color: #F8F8F8;
+}
+.pageli{
+	cursor:pointer;
+	float:left;
+	width: 30px;
+	text-align: center;
+	padding:6px 0;
+	margin-right:15px;
+	background-color: #fff;
+	color:#999;
 }

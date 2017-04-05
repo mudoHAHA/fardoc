@@ -28,9 +28,6 @@ a{
 	position:relative;
 	margin-right:37px;
 }
-#pro_img img,#pro_img dd div ul li img{
-	background-color: #F7AEAE;
-}
 #pro_img dl dt{
 	width: 440px;
 	height: 370px;
@@ -57,6 +54,10 @@ a{
 	border:1px solid #E5E5E5;
 	float:left;
 	margin:7px 17px;
+}
+#pro_img dd li img{
+	width: 50px;
+	height: 50px;
 }
 /*#pro_img>dl>dd>ul>li:hover{
 	border:2px solid #E4393C;
@@ -324,9 +325,10 @@ a{
 	border-right:1px solid #E7E7E7;
 }
 .second ul{
+	width: 1014px;
 	display:inline-block;
 	vertical-align: top;
-	margin:42px 100px 41px 71px;
+	margin:42px 20px 41px 113px;
 }
 .second ul li{
 	font-size:1.1em; 
@@ -439,3 +441,7 @@ a{
     	border:2px solid #167A58;
     	margin-top:10px;
     }
+ .second div ul li{
+ 	width: 25%;
+ 	float:left;
+ }

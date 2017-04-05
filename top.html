@@ -5,38 +5,92 @@
 	<title>首页</title>
 	<link rel="stylesheet" type="text/css" href="css/common.css"/>
   <script src="js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/publicUrl.js" ></script>
+  <script type="text/javascript" src="js/top.js" ></script>
   <script>
-       $(document).ready(function () {
-        //导航栏下拉菜单
-          var num;
-          $(".nav-wrap>.w>ul>li").hover(function(){
-          /*下拉框出现*/
-             num = $(this).index();
-             $('#box-'+num).slideDown(300);
-          },function(){
-            /*下拉框消失*/
-             $('#box-'+num).hide();
-            });
-          $(".hidden-box").hover(function(){
-            $(this).show();
-          },function(){
-            $(this).slideUp(200);
-          });
-       })
+  	$(function(){
+  		$("#loginSpan").text(localStorage.username);
+  		if($("#loginSpan").text()!="登录"){
+  			$("#loginSpan").hover(function(){
+  				$(".logout").css('display','block');
+  			},function(){
+  				$(".logout").css('display','none');
+  			});
+  			$(".logout").hover(function(){
+  				$(".logout").css('display','block');
+  			},function(){
+  				$(".logout").css('display','none');
+  			});
+  		}
+  		//注销登录
+  		$(".logout").click(function(){
+  			 localStorage.removeItem("username"); //清除本地用户名信息
+  			$.ajax({
+  				type:"post",
+  				url:host+"/terminal/user/logout",
+				success:function(json){					
+					if(json.code==2000){
+						alert(json.message);
+						window.location.reload();						
+					}
+				},
+				error:function(){
+					alert("交互异常");
+				},
+				complete:function(){
+					$("#loginSpan").text("登录");
+				}
+  			});
+  		})
+  		//跳转注册
+  		$('#regiSpan').click(function(){
+  			localStorage.removeItem("username"); //清除本地用户名信息
+  			$("#loginSpan").text("登录");
+  		})
+
+          $.ajax({
+            url:host+'/terminal/shoppingCart/list',
+            xhrFields: {
+              withCredentials: true //跨域名请求。XHR：XMLHttpRequest (XHR) ，基于XML技术的Http请求
+                    },
+                    crossDomain: true,
+
+                    success:function(data){
+                        $('#listNum').html(data.data.pager.count);
+                    }
+          })
+  		//资讯中心下拉跳转
+  		//function getType(e){localStorage.infoType=$(e).attr('id');}
+  	})
   </script>
+  <style>
+.logout{
+	    display:none;
+    background-color: e5e5e5;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    position: absolute;
+    padding: 0 10px;
+    background-color: #ededed;
+    top: 23px;
+	}   
+  </style>
 </head>
-<body>
-  <!-- 导航栏 -->
+<body >
+
+    <!-- 导航栏 -->
    <div class="header">
       <div class="user_nav">
          <div class="w">
            <span>欢迎来到农博士</span>
            <ul>
-              <li><a href="#">登录</a></li>
+               <li><a href="login.html"><span id="loginSpan">登录</span></a>
+               		<a href="javascript:void(0);"><span class="logout">注销</span></a>
+               </li>
               <li>|</li>
-              <li><a href="#">注册</a></li>
+              <li><a href="register.html"><span id="regiSpan">注册</span></a></li>
               <li>|</li>
-              <li><a href="#">我的订单</a></li>
+              <li><a href="vipCenter.html">我的订单</a></li>
            </ul>
          </div>
       </div>
@@ -51,7 +105,7 @@
                 <button>搜索</button>
             </div>
             <div class="mid_shoppingcar">
-                <a href="#"><i><img src="img/满购物车.png" alt=""></i><p>购物车(2)</p></a>
+                <a href="car.html"><i><img src="img/购物车-2.png" alt=""></i><p>购物车(<span id="listNum"></span>)</p></a>
             </div>
 
          </div>
@@ -59,48 +113,48 @@
       <div class="nav-wrap">
          <div class="w">
           <!--导航条-->
-             <ul>
-              <li><a href="#"><i class="home_ico"></i>首页</a></li>
-              <li> <a href="#">资讯中心</a></li>
-              <li><a href="#">产品商城</a></li>
-              <li><a href="#">应急信息</a></li>
-              <li><a href="#">教育服务</a></li>
-              <li><a href="#">会员中心</a></li>
-              <li class="nav-last"><a href="#">关于我们</a></li>
+             <ul class="clearfix">
+             	<li><a href="index.html"><i class="home_ico"></i>首页</a></li>
+             	<li> <a href="information_center.html">资讯中心</a></li>
+             	<li><a href="mall.html">产品商城</a></li>
+             	<li><a href="emerInfo.html">应急信息</a></li>
+             	<li><a href="education_services.html">教育服务</a></li>
+             	<li><a href="vipCenter.html">会员中心</a></li>
+             	<li class="nav-last"><a href="about_us_platform.html">关于我们</a></li>
              </ul>
           <!--隐藏下拉菜单-->
              <div id="box-1" class="hidden-box hidden-loc-zxzx">
-                  <ul>
-                      <li><a href="#">公司新闻</a></li>
-                      <li><a href="#">行业动态</a></li>
-                      <li><a href="#">政策公告</a></li>
-                      <li><a href="#">种植技术</a></li>
-                  </ul>
+                  <!--<ul>
+                      <li><a id="NEWS_INFO" href="info_company_news.html" onclick="getType(this)">公司新闻</a></li>
+                      <li><a id="INDUSTRY_DYNAMICS" href="info_company_news.html" onclick="getType(this)">行业动态</a></li>
+                      <li><a id="POLICY_ANNOUNCEMENT" href="info_company_news.html" onclick="getType(this)">政策公告</a></li>
+                      <li><a id="PLANTING_TECHIQUE" href="info_company_news.html" onclick="getType(this)">种植技术</a></li>
+                  </ul>-->
              </div>
              <div id="box-3" class="hidden-box hidden-loc-yjxx">
                   <ul>
-                      <li><a href="#">气象警报信息</a></li>
-                      <li><a href="#">病虫信息</a></li>
+                      <li><a href="emerInfo.html">气象警报信息</a></li>
+                      <li><a href="emergency_information.html">病虫信息</a></li>
                   </ul>
              </div>
              <div id="box-4" class="hidden-box hidden-loc-jyfw">
                   <ul>
-                      <li><a href="#">图文文章</a></li>
-                      <li><a href="#">微视频</a></li>
+                      <li><a href="education_services.html">图文文章</a></li>
+                      <li><a href="min_videos.html">微视频</a></li>
                   </ul>
              </div>
              <div id="box-5" class="hidden-box hidden-loc-hyzx">
-                  <ul>
-                      <li><a href="#">会员介绍</a></li>
-                      <li><a href="#">个人信息</a></li>
-                      <li><a href="#">收货地址</a></li>
-                      <li><a href="#">我的订单</a></li>
-                  </ul>
+                  <!--<ul>
+                      <li><a href="vipCenter.html">会员介绍</a></li>
+                      <li><a href="vipCenter.html">个人信息</a></li>
+                      <li><a href="vipCenter.html">收货地址</a></li>
+                      <li><a href="vipCenter.html">我的订单</a></li>
+                  </ul>-->
              </div>
              <div id="box-6" class="hidden-box hidden-loc-gywm">
                   <ul>
-                      <li><a href="#">平台介绍</a></li>
-                      <li><a href="#">联系我们</a></li>
+                      <li><a href="about_us_platform.html">平台介绍</a></li>
+                      <li><a href="connect_us.html">联系我们</a></li>
                   </ul>
              </div>            
          </div>

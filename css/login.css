@@ -1,0 +1,88 @@
+/*------- 登录页面  开始-------*/
+.middle_login {
+	width: 100%;
+	height: 800px;
+	margin-top: -40px;
+	position: relative;
+	background: url(../img/bg.png) no-repeat center center;
+}
+ .login_mask {
+	width: 100%;
+	height: 800px;
+	position: absolute;
+}
+.login_screen {
+	width: 280px;
+	height: 300px;
+	margin:100px auto;
+	padding: 30px 20px 48px 28px;
+	background-color: #fff;
+	position: relative;
+}
+.login_screen h5 {
+	font-size: 20px;
+	font-weight: normal;
+	text-align: center;
+	margin-bottom:50px;
+}
+.login_screen i {
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	border:1px solid #E5E5E5;
+	background-color: #EAEAEA;
+	position: absolute;
+	top: 98px;left: 28px;
+}
+.login_screen .person_ico  s{
+    width: 19px;
+    height: 23px;
+    display: inline-block;
+    position: absolute;
+    top: 10px; left: 12px;
+    background: url(../img/person_ico.png)no-repeat;
+}
+.login_screen .possword_ico {
+	top: 163px;
+}
+.login_screen .possword_ico s {
+	width: 19px;
+    height: 22px;
+    display: inline-block;
+    position: absolute;
+    top: 10px; left: 12px;
+    background: url(../img/possword_ico.png)no-repeat;
+}
+
+.login_screen input {
+	width: 205px;
+	height:16px;
+	padding: 14px;
+	margin-left: 45px;
+	margin-bottom: 19px;
+	/*color: #ABABAB;*/
+	border: 1px solid #E5E5E5;
+	border-radius: 3px;
+}
+.login_screen .pass_word {
+	float: right;
+}
+
+
+
+
+#loginBtn{
+	width: 280px;
+	height: 46px;
+	margin-top:42px;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 18px;
+	line-height: 0px;
+	margin-left: 0;
+	background-color: #0F705C;
+	cursor: pointer;
+}
+
+
+/*------- 登录页面  结束-------*/

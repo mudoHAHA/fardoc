@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/detail.css">
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/popup.js"></script>
+	<script type="text/javascript" src="js/publicUrl.js"></script>
 	<script type="text/javascript" src="js/detail.js"></script>
 	<script type="text/javascript">
 		$(function(){
@@ -25,20 +26,20 @@
 			<span>当前位置 : </span>
 			<a href="mall.html">产品商城</a>
 			<span>></span>
-			<span>新鲜水果</span>
+			<span id="father"></span>
 		</div>
 		<div class="info_main">
 			<div id="pro_img" class="lt">
 				<dl>
-					<dt><img src="" alt=""></dt>
+					<dt></dt>
 					<dd>
 						<div>
 							<ul>
-								<li><img src="" alt=""></li>
-								<li><img src="" alt=""></li>
-								<li><img src="" alt=""></li>
-								<li><img src="" alt=""></li>
-								<li><img src="" alt=""></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
 							</ul>
 						</div>
 					</dd>
@@ -46,35 +47,34 @@
 			</div>
 			<div id="pro_txt" class="lt">
 				<div class="tit">
-					<p>【宝鸡农产品商城】啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>					
+					<p></p>					
 				</div>
 				<div class="line"></div>
 				<div id="price">
 					<ul>
-						<li class="lt"><span>运费:</span><span>￥10</span></li>
-						<li class="lt"><span>容量:</span><span>30</span><span>枚</span></li>
-						<li class="lt"><span>销量:</span><span>1024</span></li>
+						<li class="lt"><span>运费:</span><span>￥</span><span class="postfee"></span></li>
+						<li class="lt "><span>容量:</span><span>30</span><span>枚</span></li>
+						<li class="lt"><span>销量:</span><span class="sales"></span></li>
 					</ul>
 				</div>
 				<div id="add">
 					<b class="lt">数量:</b>
 					<i class="low1"></i>
-					<input type="text" value="1">
+					<input type="text" value="1" readonly="readonly">
 					<i class="add1"></i>
-					<span class="stock">(库存量:<span>99</span>)</span>
+					<span class="stock">(库存量:<span></span>)</span>
 				</div>
 				<div class="clr"></div>
 				<div id="selected">
-					<span>￥104.00</span>
+					<span></span>
 					<s>
-						<span>原价:</span>
-						<span>￥288.00</span>
+						<span></span>
 					</s>
 				</div>
 				<div class="btns">
 					<input type="button" value="立即下单">
 					<div class="btn1">
-						<input  type="button" value="加入购物车">
+						<input id="joinsuccess" type="button" value="加入购物车">
 						<div class="popup">
 						    <div class="title">
 						      <span>x</span>
@@ -84,8 +84,8 @@
 						    	<i></i>
 						    	<p>宝贝已成功添加到购物车!</p>
 						    	<p>购物车共有<span>2</span>个宝贝，合计<span>200.00</span>元。</p>
-						    	<a href="#"><input class="balance" type="button" value="去购物车结算"></a>
-						    	<a href="goodslist.html"><input class="continue" type="button" value="继续逛逛"></a>
+						    	<a href="javascript:void(0);"><input class="balance" type="button" value="去购物车结算"></a>
+						    	<a href="javascript:void(0);"><input class="continue" type="button" value="继续逛逛"></a>
 						    </div>
 						  </div>
 						  <div class="mask_shadow"></div>
@@ -113,35 +113,13 @@
 			</div>
 			<div class="second">
 				<div>
-					<ul>
-						<li>净含量：300克</li>
-						<li>系列：蜂蜜</li>
-						<li>产地：中国大陆</li>
-						<li>采收季节：秋季</li>
-					</ul>
-					<ul>
-						<li>包装方式：食用农产品</li>
-						<li>规格：300克</li>
-						<li>省份：湖南省</li>
-						<li>特产品类：秦岭山鸡蛋</li>
-					</ul>
-					<ul>
-						<li>净含量：300克</li>
-						<li>系列：蜂蜜</li>
-						<li>产地：中国大陆</li>
-						<li>采收季节：秋季</li>
-					</ul>
-					<ul>
-						<li>包装方式：食用农产品</li>
-						<li>规格：300克</li>
-						<li>省份：湖南省</li>
-					</ul>
+					<ul></ul>
 				</div>
 				<div class="introimg">
 					<img src="" alt="">
 				</div>
 				<div class="intro">
-					<p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+					<p></p>
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="css/register.css"/>
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/publicUrl.js" ></script>
+  <script src="js/register.js"></script>
+  	<script type="text/javascript">
+		$(function(){
+			$('#top').load('top.html');
+			$('#foot').load('footer.html');
+		});
+	</script>
+
+</head>
+<body>
+ <div id="top"></div>
+  
+  <!--  注册内容  -->
+  <div class="middle_register">
+      <div class="register_title">
+         <h5>用户注册</h5>
+         <span>已有账户，<a href="login.html" style="color:#619CE8;">登录</a></span>
+      </div>
+
+        <table class="register_table" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+          	<td><label for="name">用户名：</label></td>
+          	<td><input id="name" type="text" ><span></span></td>
+          </tr>
+          <tr>
+          	<td><label for="cellphone">手机号码：</label></td>
+          	<td><input type="text" id="cellphone" value="" /><span></span></td>
+          </tr> 
+          <tr>
+          	<td><label for='telCode'>手机验证码：</label></td>
+          	<td><input id='telCode' type="text" class="tel_label"><p class="tel_code">发送验证码</p></td>
+          </tr>
+          <tr>
+          	<td><label for="email">邮箱：</label></td>
+          	<td><input type="text" id="email" value="" /><span></span></td>
+          </tr> 
+          <tr>
+          <!--<tr>
+          	<td><label for="picCode">图片验证码：</label></td>
+          	<td><input id="picCode" type="text" class="tel_label"><p class="pic_code">获取图片验证码</p></td>
+          </tr>-->
+          <tr>
+          	<td><label for="password">密码：</label></td>
+          	<td><input id="password" type="password" ><span></span></td>
+          </tr>
+          <tr>
+          	<td> <label for="repassword">确认密码：</label></td>
+          	<td><input id="repassword"  type="password" ><span></span></td>
+          </tr>
+          <tr>
+             <td><input  type="checkbox" checked="checked"></td>
+             <td><span style="color:#B7B7B7;">我已阅读并接受<a href="#" style="color:#619CE8;">《农博士服务条款》</a></span></td>
+          </tr>
+          <tr>
+          	<td></td>
+          	<td><button class="register_btn">注册</button></td>
+          </tr>   
+        </table>
+
+  </div>
+
+   <!-- footer -->
+  <div id="foot"></div>
+</body>
+</html>

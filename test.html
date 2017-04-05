@@ -4,8 +4,23 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<script type="text/javascript">
-		var arr = [1,2,12];
-		console.log(arr[0].length);
+		window.onload = function(){
+			var arr = [6,2,3,1,4,8,5,7];
+
+			for (var i = 0; i < arr.length; i++) {
+				var one = arr[i];
+				for (var j = i+1; j < arr.length; j++) {
+					var two = arr[j];
+					if (one>two) {
+						var three = one+two;
+						arr[i] = three-one;
+						arr[j] = three-two;
+					};
+				};
+			};
+
+			console.log(arr);
+		}
 	</script>
 </head>
 <body>

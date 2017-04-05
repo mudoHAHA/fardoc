@@ -73,7 +73,7 @@
       var self = this;
 
       $e.parent().find('.mask_shadow').show().animate({opacity: 1});
-      $e.show().animate({opacity: 1, top: 260}, function () {
+      $e.show().animate({opacity: 1, top: ($(window).height() - self.$elem.height()) / 2 + $(document).scrollTop()}, function () {
         self.b_stop = true;
       });
     },
